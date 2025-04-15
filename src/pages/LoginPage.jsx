@@ -20,7 +20,7 @@ export default function LoginPage() {
     e.preventDefault();
 
     try {
-      const username = await login(formData);
+      const token = await login(formData);
       navigate("/dashboard");
     } catch (err) {
       setError(err.response?.data?.message || "Login failed");
